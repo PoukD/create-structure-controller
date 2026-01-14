@@ -60,7 +60,7 @@ func CreateControllerStructure(input string, subFolder string) error {
 	// 8. Create files (no overwrite)
 	files := map[string]string{
 		fmt.Sprintf("%sController.go", root):               fmt.Sprintf("package %sController", root),
-		fmt.Sprintf("database/entity/%sEntity.go", root):   "package entitys",
+		fmt.Sprintf("database/entity/%sEntity.go", root):   "package entity",
 		fmt.Sprintf("database/service/%sService.go", root): "package service",
 		"domain/http/httpInterface.go":                     "package httpInterface",
 		fmt.Sprintf("domain/model/%sHttp.go", root):        "package httpModel",
