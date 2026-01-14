@@ -64,7 +64,7 @@ func CreateControllerStructure(input string, subFolder string) error {
 		fmt.Sprintf("database/service/%sService.go", root): "package service",
 		"domain/http/httpInterface.go":                     "package httpInterface",
 		fmt.Sprintf("domain/model/%sHttp.go", root):        "package httpModel",
-		fmt.Sprintf("model/%sModel.go", root):              fmt.Sprintf("package %sModels", root),
+		fmt.Sprintf("model/%sModel.go", root):              fmt.Sprintf("package %sModel", root),
 	}
 
 	for path, content := range files {
