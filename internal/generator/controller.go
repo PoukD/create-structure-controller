@@ -44,8 +44,7 @@ func CreateControllerStructure(input string, subFolder string) error {
 
 	// 7. Create directories
 	dirs := []string{
-		"database/entity",
-		"database/service",
+		"service",
 		"domain/http",
 		"domain/model",
 		"model",
@@ -59,12 +58,11 @@ func CreateControllerStructure(input string, subFolder string) error {
 
 	// 8. Create files (no overwrite)
 	files := map[string]string{
-		fmt.Sprintf("%sController.go", root):               fmt.Sprintf("package %sController", root),
-		fmt.Sprintf("database/entity/%sEntity.go", root):   "package entitys",
-		fmt.Sprintf("database/service/%sService.go", root): "package service",
-		"domain/http/httpInterface.go":                     "package httpInterface",
-		fmt.Sprintf("domain/model/%sHttp.go", root):        "package httpModel",
-		fmt.Sprintf("model/%sModel.go", root):              fmt.Sprintf("package %sModels", root),
+		fmt.Sprintf("%sController.go", root):        fmt.Sprintf("package %sController", root),
+		fmt.Sprintf("service/%sService.go", root):   "package service",
+		"domain/http/httpInterface.go":              "package httpInterface",
+		fmt.Sprintf("domain/model/%sHttp.go", root): "package httpModel",
+		fmt.Sprintf("model/%sModel.go", root):       fmt.Sprintf("package %sModels", root),
 	}
 
 	for path, content := range files {
